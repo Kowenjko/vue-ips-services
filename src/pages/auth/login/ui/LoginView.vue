@@ -14,7 +14,7 @@ interface LoginForm {
 
 const form: Ref<LoginForm> = ref({
   email: null,
-  password: null,
+  password: null
 })
 
 const router = useRouter()
@@ -42,15 +42,29 @@ const isFromValid = (form: LoginForm): form is { email: string; password: string
     <div class="vstack">
       <div>
         <label class="label">Email</label>
-        <input v-model="form.email" class="input" />
+        <input
+          v-model="form.email"
+          class="input" />
       </div>
       <div>
         <label class="label">Пароль</label>
-        <input v-model="form.password" type="password" class="input" />
+        <input
+          v-model="form.password"
+          type="password"
+          class="input" />
       </div>
       <div class="hstack">
-        <RouterLink :to="REGISTER_LINK" class="btn btn-ghost"> Регистрация </RouterLink>
-        <button type="button" class="btn btn-primary" @click="loginHandler">Войти</button>
+        <RouterLink
+          :to="REGISTER_LINK"
+          class="btn btn-ghost">
+          Регистрация
+        </RouterLink>
+        <button
+          type="button"
+          class="btn btn-primary"
+          @click="loginHandler">
+          Войти
+        </button>
       </div>
     </div>
   </div>
