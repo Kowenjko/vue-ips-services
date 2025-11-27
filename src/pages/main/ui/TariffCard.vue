@@ -41,9 +41,9 @@ defineEmits<{
   (e: 'subscribe', id: string): void
 }>()
 
-const currencyFormatter = new Intl.NumberFormat('ru-RU', {
+const currencyFormatter = new Intl.NumberFormat('ua-UA', {
   style: 'currency',
-  currency: 'RUB'
+  currency: 'UAH'
 })
 </script>
 
