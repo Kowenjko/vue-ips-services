@@ -37,9 +37,9 @@ import { getSubscribeList } from '../api'
 
 const subscribes: Ref<Array<Subscribe>> = ref([])
 
-const currencyFormatter = new Intl.NumberFormat('ru-RU', {
+const currencyFormatter = new Intl.NumberFormat('ua-UA', {
   style: 'currency',
-  currency: 'RUB'
+  currency: 'UAH'
 })
 
 onMounted(async () => {
