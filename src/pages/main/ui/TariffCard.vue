@@ -23,7 +23,8 @@
         <RouterLink to="/">Подробнее</RouterLink>
         <button
           type="button"
-          class="btn btn-primary">
+          class="btn btn-primary"
+          @click="$emit('subscribe', id)">
           Подключить
         </button>
       </div>
@@ -36,9 +37,13 @@ import type { Tariff } from '../api'
 
 defineProps<Tariff>()
 
-const currencyFormatter = new Intl.NumberFormat('ua-UA', {
+defineEmits<{
+  (e: 'subscribe', id: string): void
+}>()
+
+const currencyFormatter = new Intl.NumberFormat('ru-RU', {
   style: 'currency',
-  currency: 'UAH'
+  currency: 'RUB'
 })
 </script>
 
